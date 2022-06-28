@@ -1,0 +1,99 @@
+// Página de inicio...
+
+
+
+.intro
+  background-image: url("../img/img-home/foto-portada.png")
+  background-size: cover
+  background-position: center left
+  color: $white
+  padding-bottom: 3rem
+  padding-top: 0
+  .container-texto-intro
+    width: 35rem
+
+.mis-proyectos
+  text-align: center
+  .fotos-proyectos
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 1fr 1fr
+    gap: 1rem
+    margin-top: 2rem
+    &__elemento
+      position: relative
+      &-imagen
+        display: block
+      &-hover
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        background-color: $rosa-9
+        opacity: 0
+        &:hover
+          opacity: 50%
+
+
+.que-ofrezco
+  text-align: center
+  .sector-habilidades
+    text-align: left
+    margin-bottom: 6rem
+    &__fila
+      text-align: center
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-template-rows: 1fr
+      gap: 3rem
+      margin-top: 2rem
+      margin-bottom: 2rem
+      &-habilidad
+        text-decoration: none
+        &:hover .sector-habilidades__fila-hover
+          opacity: 50%
+        &:hover .sector-habilidades__fila-texto
+          color: $rosa-9
+          cursor: pointer
+      &-imagen-y-hover
+        position: relative
+      &-imagen
+        margin-bottom: 2rem
+        display: block
+        border-radius: 50%
+      &-hover
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        background-color: $rosa-9
+        opacity: 0
+        border-radius: 50%
+      &-texto
+        color: $black
+
+.mi-blog
+  margin-top: 2rem
+  .articulos
+    display: flex
+    justify-content: center
+    align-items: start
+    gap: 2rem
+    .articulo-blog
+      max-width: 32rem
+      &__foto
+        margin-bottom: 2rem
+        &-img
+          object-fit: cover
+          height: 20rem
+      &__info
+
+
+
+
+
+
+
+

@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>María Blázquez</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="theme-color" content="#C73471">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="author" content="María Blázquez">
+    <meta name="description" content="Marketing, comunicación y diseño digital">
+    <meta property="og:image" content="img/foto-portada.jpg">
+    <meta property="og:title" content="¡Hola, soy María Blázquez!">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="Esta es mi página web">
+    <meta name="twitter:site" content="@mariablazz">
+    <meta name="twitter:creator" content="@mariablazz">
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <!--Javascript-->
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <!-- Plugin Swiper JS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- CSS -->
+    <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+    <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 601px)">
+    <!-- End CSS -->
+</head>
+<body>
+    <header class="header" x-data="{ open: false }">
+        <div class="container-header">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img class="header__logo-img" src="img/logo-maria-blazquez-grande.png" alt="Logo María Blázquez">
+                </a>
+            </div>
+            <nav class="nav" :class="open ? 'nav__show' : ''">
+                <button class="icono header__aspa-cerrar" @click="open = false">
+                    <img class="header__aspa-cerrar-img" src="img/iconos/cerrar.svg" alt="Cerrar menú">
+                </button>
+                <ul class="nav__lista">
+                    <li class="nav__item">
+                        <a href="mis-proyectos.html" class="nav__link">Mis proyectos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="marketing-digital.html" class="nav__link">Marketing digital</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="disenyo-digital.html" class="nav__link">Diseño digital</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="sobre-mi.html" class="nav__link">Sobre mí</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="blog.html" class="nav__link">Blog</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contacto.html" class="nav__link">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="icono header__burger-menu" @click="open = true">
+                <img class="header__burger-menu-img" src="img/iconos/menu.svg" alt="Abrir menú">
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="pagina-proyectos info-blanco">
+            <div class="container">
+                <h1>Mis proyectos</h1>
+                <section x-data="{ activo: 1 }">
+                    <div class="tabs-proyectos">
+                        <ul class="lista-nav-proyectos">
+                            <li class="lista-nav-proyectos__elemento" :class="activo == 1 ? 'is-active': ''" @click="activo = 1">
+                                <a class="lista-nav-proyectos__link">Todos los proyectos</a>
+                            </li>
+                            <li class="lista-nav-proyectos__elemento" :class="activo == 2 ? 'is-active': ''" @click="activo = 2">
+                                <a class="lista-nav-proyectos__link">Branding</a>
+                            </li>
+                            <li class="lista-nav-proyectos__elemento" :class="activo == 3 ? 'is-active': ''" @click="activo = 3">
+                                <a class="lista-nav-proyectos__link">Cartelería</a>
+                            </li>
+                            <li class="lista-nav-proyectos__elemento" :class="activo == 4 ? 'is-active': ''" @click="activo = 4">
+                                <a class="lista-nav-proyectos__link">Packaging</a>
+                            </li>
+                            <li class="lista-nav-proyectos__elemento" :class="activo == 5 ? 'is-active': ''" @click="activo = 5">
+                                <a class="lista-nav-proyectos__link">UX/UI</a>
+                            </li>
+                            <li class="lista-nav-proyectos__elemento" :class="activo == 6 ? 'is-active': ''" @click="activo = 6">
+                                <a class="lista-nav-proyectos__link">Comunicación Digital</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <article class="contenido-tab-proyectos" :class="activo == 1 ? '' : 'is-hidden'">
+                        <article class="proyecto-portfolio">
+                            <div class="proyecto-portfolio__foto">
+                                <img class="proyecto-portfolio__foto-img" src="img/img-proyectos/papeleria-marca.jpg" alt="Identidad visual corporativa. María Blázquez.">
+                            </div>
+                            <div class="proyecto-portfolio__texto">
+                                <p class="subtitulo negrita">
+                                    Identidad visual corporativa. María Blázquez.
+                                </p>
+                                <p>
+                                    Como parte de mi proyecto final de máster, realicé la identidad visual de mi marca personal. Trabajé en mis valores de marca, elegí los colores y diseñé tanto el logo y las texturas como diferentes aplicaciones en papelería, merchandising y publicidad.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="proyecto-portfolio">
+                            <div class="proyecto-portfolio__foto">
+                                <img class="proyecto-portfolio__foto-img" src="img/img-proyectos/etiqueta-vino.jpg" alt="Etiqueta de vino. El tamborilero.">
+                            </div>
+                            <div class="proyecto-portfolio__texto">
+                                <p class="subtitulo negrita">
+                                    Etiqueta de vino. El tamborilero.
+                                </p>
+                                <p>
+                                    En la creación de este vino mi objetivo era representar la cultura manchega del tambor, especialmente de mi pueblo materno, Hellín. La textura del tambor y de la cápsula fue realizada a mano, con rotulador y acetona. El estilo es simple y elegante, representando una marca asentada, con clase y moderna al mismo tiempo.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="proyecto-portfolio">
+                            <div class="proyecto-portfolio__foto">
+                                <img class="proyecto-portfolio__foto-img" src="img/img-proyectos/amor-brujo.jpg" alt="Cartel publicitario. El amor brujo.">
+                            </div>
+                            <div class="proyecto-portfolio__texto">
+                                <p class="subtitulo negrita">
+                                    Cartel publicitario. El amor brujo.
+                                </p>
+                                <p>
+                                    Creación de un cartel para una obra de ballet. En este cartel quise representar el amor tóxico, que te acecha. Tanto los murciélagos como la silueta del hombre representan esos antiguos amores que no dejan a la protagonista seguir adelante con su vida.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="proyecto-portfolio">
+                            <div class="proyecto-portfolio__foto">
+                                <img class="proyecto-portfolio__foto-img" src="img/img-proyectos/packaging-patatas.jpg" alt="Packaging para puré de patatas. Sabores de la India.">
+                            </div>
+                            <div class="proyecto-portfolio__texto">
+                                <p class="subtitulo negrita">
+                                    Packaging para puré de patatas. Sabores de la India.
+                                </p>
+                                <p>
+                                    Este proyecto consistió en crear una caja de puré de patatas con un concepto distinto. Opté por diseñar una caja de puré con especias de la india que le dieran un sabor exótico y algo picante a la patata.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="proyecto-portfolio">
+                            <div class="proyecto-portfolio__foto">
+                                <img class="proyecto-portfolio__foto-img" src="img/img-proyectos/papeleria-amae.jpg" alt="Rediseño de marca. Amorevolous Aesthetics.">
+                            </div>
+                            <div class="proyecto-portfolio__texto">
+                                <p class="subtitulo negrita">
+                                    Rediseño de marca. Amorevolous Aesthetics.
+                                </p>
+                                <p>
+                                    Este proyecto consistió en rediseñar una marca existente que necesitara un cambio en su identidad corporativa. En mi caso, opté por rediseñar una marca pequeña de una creadora de contenido estadounidense. Esta pequeña empresa vende brillos de labios, exfoliantes y otros productos de belleza.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="proyecto-portfolio">
+                            <div class="proyecto-portfolio__foto">
+                                <img class="proyecto-portfolio__foto-img" src="img/img-proyectos/blog-cocina-desktop.png" alt="Blog de recetas vegetarianas “the veggie way”.">
+                            </div>
+                            <div class="proyecto-portfolio__texto">
+                                <p class="subtitulo negrita">
+                                    Blog de recetas vegetarianas “the veggie way”.
+                                </p>
+                                <p>
+                                    Aquí podemos ver la página home de un blog de recetas. El blog te ofrece diferentes desayunos, comidas, cenas y meriendas vegetarianas y veganas.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="proyecto-portfolio">
+                            <div class="proyecto-portfolio__foto">
+                                <img class="proyecto-portfolio__foto-img" src="img/img-proyectos/hollie.png" alt="Entrevistas">
+                            </div>
+                            <div class="proyecto-portfolio__texto">
+                                <p class="subtitulo negrita">
+                                    Entrevistas
+                                </p>
+                                <p>
+                                    Durante mis prácticas en la empresa Mailbutler, realicé varias entrevistas a profesionales de diferentes sectores. Puedes leer los artículos completos
+                                    <a href="https://www.mailbutler.io/blog/author/maria/">aquí</a>.
+                                </p>
+                            </div>
+                        </article>
+                    </article>
+                    <article class="contenido-tab-proyectos" :class="activo == 2 ? '' : 'is-hidden'">
+                        <article class="proyecto-portfolio">
+                            <div class="proyecto-portfolio__foto">
+                                <img class="proyecto-portfolio__foto-img" src="img/img-proyectos/papeleria-amae.jpg" alt="Rediseño de marca. Amorevolous Aesthetics.">
+                            </div>
+                            <div class="proyecto-portfolio__texto">
+                                <p class="subtitulo negrita">
+                                    Rediseño de marca. Amorevolous Aesthetics.
+                                </p>
+                                <p>
+                                    Este proyecto consistió en rediseñar una marca existente que necesitara un cambio en su identidad corporativa. En mi caso, opté por rediseñar una marca pequeña de una creadora de contenido estadounidense. Esta pequeña empresa vende brillos de labios, exfoliantes y otros productos de belleza.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="proyecto-portfolio">
+                            <div class="proyecto-portfolio__foto">
+                                <img class="proyecto-portfolio__foto-img" src="img/img-proyectos/papeleria-marca.jpg" alt="Identidad visual corporativa. María Blázquez.">
+                            </div>
+                            <div class="proyecto-portfolio__texto">
+                                <p class="subtitulo negrita">
+                                    Identidad visual corporativa. María Blázquez.
+                                </p>
+                                <p>
+                                    Como parte de mi proyecto final de máster, realicé la identidad visual de mi marca personal. Trabajé en mis valores de marca, elegí los colores y diseñé tanto el logo y las texturas como diferentes aplicaciones en papelería, merchandising y publicidad.
+                                </p>
+                            </div>
+                        </article>
+                    </article>
+                    <article class="contenido-tab-proyectos" :class="activo == 3 ? '' : 'is-hidden'">
+                        <article class="proyecto-portfolio">
+                            <div class="proyecto-portfolio__foto">
+                                <img class="proyecto-portfolio__foto-img" src="img/img-proyectos/amor-brujo.jpg" alt="Cartel publicitario. El amor brujo.">
+                            </div>
+                            <div class="proyecto-portfolio__texto">
+                                <p class="subtitulo negrita">
+                                    Cartel publicitario. El amor brujo.
+                                </p>
+                                <p>
+                                    Creación de un cartel para una obra de ballet. En este cartel quise representar el amor tóxico, que te acecha. Tanto los murciélagos como la silueta del hombre representan esos antiguos amores que no dejan a la protagonista seguir adelante con su vida.
+                                </p>
+                            </div>
+                        </article>
+                    </article>
+                    <article class="contenido-tab-proyectos" :class="activo == 4 ? '' : 'is-hidden'">
+                        <article class="proyecto-portfolio">
+                            <div class="proyecto-portfolio__foto">
+                                <img class="proyecto-portfolio__foto-img" src="img/img-proyectos/etiqueta-vino.jpg" alt="Etiqueta de vino. El tamborilero.">
+                            </div>
+                            <div class="proyecto-portfolio__texto">
+                                <p class="subtitulo negrita">
+                                    Etiqueta de vino. El tamborilero.
+                                </p>
+                                <p>
+                                    En la creación de este vino mi objetivo era representar la cultura manchega del tambor, especialmente de mi pueblo materno, Hellín. La textura del tambor y de la cápsula fue realizada a mano, con rotulador y acetona. El estilo es simple y elegante, representando una marca asentada, con clase y moderna al mismo tiempo.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="proyecto-portfolio">
+                            <div class="proyecto-portfolio__foto">
+                                <img class="proyecto-portfolio__foto-img" src="img/img-proyectos/packaging-patatas.jpg" alt="Packaging para puré de patatas. Sabores de la India.">
+                            </div>
+                            <div class="proyecto-portfolio__texto">
+                                <p class="subtitulo negrita">
+                                    Packaging para puré de patatas. Sabores de la India.
+                                </p>
+                                <p>
+                                    Este proyecto consistió en crear una caja de puré de patatas con un concepto distinto. Opté por diseñar una caja de puré con especias de la india que le dieran un sabor exótico y algo picante a la patata.
+                                </p>
+                            </div>
+                        </article>
+                    </article>
+                    <article class="contenido-tab-proyectos" :class="activo == 5 ? '' : 'is-hidden'">
+                        <article class="proyecto-portfolio">
+                            <div class="proyecto-portfolio__foto">
+                                <img class="proyecto-portfolio__foto-img" src="img/img-proyectos/blog-cocina-desktop.png" alt="Blog de recetas vegetarianas “the veggie way”.">
+                            </div>
+                            <div class="proyecto-portfolio__texto">
+                                <p class="subtitulo negrita">
+                                    Blog de recetas vegetarianas “the veggie way”.
+                                </p>
+                                <p>
+                                    Aquí podemos ver la página home de un blog de recetas. El blog te ofrece diferentes desayunos, comidas, cenas y meriendas vegetarianas y veganas.
+                                </p>
+                            </div>
+                        </article>
+                    </article>
+                    <article class="contenido-tab-proyectos" :class="activo == 6 ? '' : 'is-hidden'">
+                        <article class="proyecto-portfolio">
+                            <div class="proyecto-portfolio__foto">
+                                <img class="proyecto-portfolio__foto-img" src="img/img-proyectos/hollie.png" alt="Entrevistas">
+                            </div>
+                            <div class="proyecto-portfolio__texto">
+                                <p class="subtitulo negrita">
+                                    Entrevistas
+                                </p>
+                                <p>
+                                    Durante mis prácticas en la empresa Mailbutler, realicé varias entrevistas a profesionales de diferentes sectores. Puedes leer los artículos completos
+                                    <a href="https://www.mailbutler.io/blog/author/maria/">aquí</a>.
+                                </p>
+                            </div>
+                        </article>
+                    </article>
+                </section>
+            </div>
+        </section>
+        <section class="contacto info-rosa">
+            <div class="container">
+                <div class="contacto__intro texto-centrado">
+                    <h2 class="titulo-mediano">¿Quieres contactar conmigo?</h2>
+                    <p class="texto-grande">Escríbeme un email a: mariablazz@outlook.com o rellena el formulario</p>
+                </div>
+                <div class="formulario">
+                    <form class="formulario-rellenar"
+                          action="https://formspree.io/f/mrgjdobz"
+                          method="POST"
+                    >
+
+                        <p class="formulario-rellenar__nombre">
+                            <label>
+                                <span class="etiqueta-formulario">Nombre y apellido</span>
+                                <input type="text" name="nombre">
+                            </label>
+                        </p>
+                        <p class="formulario-rellenar__email">
+                            <label>
+                                <span class="etiqueta-formulario">Email</span>
+                                <input type="email" name="email">
+                            </label>
+                        </p>
+                        <p class="formulario-rellenar__mensaje">
+                            <label>
+                                <span class="etiqueta-formulario">Mensaje</span>
+                                <textarea type="mensaje" cols="30" rows="10"></textarea>
+                            </label>
+                        </p>
+                        <p class="formulario-rellenar__enviar">
+                            <input type="submit" value="Enviar" class="boton-rosa">
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="mi-footer">
+        <div class="container-footer">
+            <div class="contenido">
+                <p class="mi-footer__texto">
+                    © 2022<br> María Blázquez. Marketing, comunicación y diseño digital.
+                </p>
+                <nav class="mi-footer__nav">
+                    <ul class="mi-footer__nav-lista">
+                        <li class="mi-footer__nav-lista-elemento">
+                            <a href="mis-proyectos.html" class="mi-footer__nav-lista-elemento-link">Mis proyectos</a>
+                        </li>
+                        <li class="mi-footer__nav-lista-elemento">
+                            <a href="marketing-digital.html" class="mi-footer__nav-lista-elemento-link">Marketing digital</a>
+                        </li>
+                        <li class="mi-footer__nav-lista-elemento">
+                            <a href="disenyo-digital.html" class="mi-footer__nav-lista-elemento-link">Diseño digital</a>
+                        </li>
+                        <li class="mi-footer__nav-lista-elemento">
+                            <a href="sobre-mi.html" class="mi-footer__nav-lista-elemento-link">Sobre mí</a>
+                        </li>
+                    </ul>
+                    <ul class="mi-footer__nav-lista">
+                        <li class="mi-footer__nav-lista-elemento">
+                            <a href="blog.html" class="mi-footer__nav-lista-elemento-link">Blog</a>
+                        </li>
+                        <li class="mi-footer__nav-lista-elemento">
+                            <a href="contacto.html" class="mi-footer__nav-lista-elemento-link">Contacto</a>
+                        </li>
+                        <li class="mi-footer__nav-lista-elemento">
+                            <a href="politica-cookies.html" class="mi-footer__nav-lista-elemento-link">Política de Cookies</a>
+                        </li>
+                        <li class="mi-footer__nav-lista-elemento">
+                            <a href="aviso-legal.html" class="mi-footer__nav-lista-elemento-link">Aviso legal y política de privacidad</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="redes">
+                    <p class="redes__titulo">
+                        ¡Sígueme en redes sociales!
+                    </p>
+                    <ul class="redes__ul">
+                        <li class="redes__ul-red-social icono">
+                            <a href="https://www.tiktok.com/@mariablazz" class="redes__ul-red-social-link">
+                                <img src="img/iconos/tiktok-logo.svg" alt="TikTok" class="redes__ul-red-social-link-img">
+                            </a>
+                        </li>
+                        <li class="redes__ul-red-social icono">
+                            <a href="https://twitter.com/mariablazz" class="redes__ul-red-social-link">
+                                <img src="img/iconos/twitter-logo.svg" alt="Twitter" class="redes__ul-red-social-link-img">
+                            </a>
+                        </li>
+                        <li class="redes__ul-red-social icono">
+                            <a href="https://www.instagram.com/mariablazz/" class="redes__ul-red-social-link">
+                                <img src="img/iconos/instagram-logo.svg" alt="Instagram" class="redes__ul-red-social-link-img">
+                            </a>
+                        </li>
+                        <li class="redes__ul-red-social icono">
+                            <a href="https://www.youtube.com/c/MaríaBlázquez" class="redes__ul-red-social-link">
+                                <img src="img/iconos/youtube-logo.svg" alt="YouTube" class="redes__ul-red-social-link-img">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+</body>
+</html>

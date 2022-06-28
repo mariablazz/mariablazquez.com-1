@@ -1,0 +1,43 @@
+
+.pagina-proyectos
+  .tabs-proyectos
+    .lista-nav-proyectos
+      display: flex
+      overflow-x: auto
+      list-style: none
+      padding: 0
+      gap: 2rem
+      justify-content: space-between
+      align-items: center
+      cursor: pointer
+      margin-bottom: 3rem
+      &__elemento
+        background-color: $verde-1
+        margin-top: 0.5rem
+      &__link
+        padding: 0.5rem 2rem
+        display: block
+        text-align: center
+        white-space: nowrap
+      &__elemento:hover, .is-active
+        background-color: $verde-9
+        color: $white
+
+  .contenido-tab-proyectos
+    .proyecto-portfolio
+      display: grid
+      grid-template-columns: 2fr 1fr
+      grid-template-rows: 1fr
+      gap: 3rem
+      margin-bottom: 5rem
+      &__foto
+        margin-bottom: 2rem
+        text-align: center
+        &-img
+      &__texto
+
+
+
+
+
+

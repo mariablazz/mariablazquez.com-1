@@ -1,0 +1,53 @@
+// header
+
+.header
+  .container-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background-color: $rosa-1
+    padding: 1rem 2rem
+  &__aspa-cerrar
+    grid-column: 3 / 4
+    grid-row: 1 / 2
+    padding: 1rem
+    &-img
+      width: 2rem
+      height: 2rem
+  &__burger-menu
+    &-img
+      width: 2rem
+      height: 2rem
+  &__logo-img
+    width: 8rem
+  .nav
+    display: grid
+    $tamanyoColumna: 4rem
+    grid-template-columns: $tamanyoColumna 1fr $tamanyoColumna
+    grid-template-rows: $tamanyoColumna 1fr $tamanyoColumna
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: $rosa-1
+    transition: .5s
+    transform: translateX(-100vw)
+    &__show
+      transform: translateX(0)
+    &__lista
+      grid-column: 2 / 3
+      grid-row: 2 / 3
+      list-style: none
+      padding: 0
+      display: flex
+      flex-direction: column
+      justify-content: start
+      align-items: center
+      margin-top: 4rem
+    &__link
+      display: block
+      font-size: 1.2rem
+      padding: 1rem
+      text-decoration: none
+      color: $black

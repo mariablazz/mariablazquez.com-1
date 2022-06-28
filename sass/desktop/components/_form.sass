@@ -1,0 +1,32 @@
+.formulario
+  display: flex
+  justify-content: center
+
+.formulario-rellenar
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: 5rem 5rem 5rem
+  justify-content: center
+  gap: 1rem
+  margin-top: 2rem
+  max-width: 40rem
+  &__nombre
+    grid-column: 1 / 2
+    grid-row: 1 / 2
+  &__email
+    grid-column: 1 / 2
+    grid-row: 2 / 3
+  &__mensaje
+    grid-column: 2 / 3
+    grid-row: 1 / 4
+  &__enviar
+    grid-column: 1 / 2
+    grid-row: 3 / 4
+
+input
+  border: 1px solid $rosa-9
+  display: flex
+
+textarea
+  border: 1px solid $rosa-9
+  display: flex

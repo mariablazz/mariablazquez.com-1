@@ -1,0 +1,358 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>María Blázquez</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="theme-color" content="#C73471">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="author" content="María Blázquez">
+    <meta name="description" content="Marketing, comunicación y diseño digital">
+    <meta property="og:image" content="img/foto-portada.jpg">
+    <meta property="og:title" content="¡Hola, soy María Blázquez!">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="Esta es mi página web">
+    <meta name="twitter:site" content="@mariablazz">
+    <meta name="twitter:creator" content="@mariablazz">
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <!--Javascript-->
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <!-- Plugin Swiper JS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- CSS -->
+    <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+    <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 601px)">
+    <!-- End CSS -->
+</head>
+<body>
+    <header class="header" x-data="{ open: false }">
+        <div class="container-header">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img class="header__logo-img" src="img/logo-maria-blazquez-grande.png" alt="Logo María Blázquez">
+                </a>
+            </div>
+            <nav class="nav" :class="open ? 'nav__show' : ''">
+                <button class="icono header__aspa-cerrar" @click="open = false">
+                    <img class="header__aspa-cerrar-img" src="img/iconos/cerrar.svg" alt="Cerrar menú">
+                </button>
+                <ul class="nav__lista">
+                    <li class="nav__item">
+                        <a href="mis-proyectos.html" class="nav__link">Mis proyectos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="marketing-digital.html" class="nav__link">Marketing digital</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="disenyo-digital.html" class="nav__link">Diseño digital</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="sobre-mi.html" class="nav__link">Sobre mí</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="blog.html" class="nav__link">Blog</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contacto.html" class="nav__link">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="icono header__burger-menu" @click="open = true">
+                <img class="header__burger-menu-img" src="img/iconos/menu.svg" alt="Abrir menú">
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="intro-servicios info-blanco">
+            <div class="container">
+                <div class="titulo-servicios">
+                    <div class="titulo-servicios__texto">
+                        <h1>Diseño digital</h1>
+                        <p class="subtitulo regular">¿Necesitas un buen diseño de marca para impulsar tu negocio? Yo puedo ayudarte.</p>
+                        <p>Utiliza el poder del diseño gráfico para optimizar tu identidad visual corporativa y lograr una imagen de marca fresca y moderna.</p>
+                        <p><a href="contacto.html" class="boton-rosa">Contacta</a></p>
+                    </div>
+                    <div class="titulo-servicios__foto">
+                        <img class="titulo-servicios__foto-img" src="img/img-disenyo-digital/portada-diseno-digital.jpg" alt="Mujer usando tablet">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="servicios-explicacion info-verde">
+            <div class="container">
+                <article class="mi-servicio">
+                    <div class="mi-servicio__texto">
+                        <h3>Mejora tu branding e identidad corporativa</h3>
+                        <p>
+                            El branding es el proceso de definición y construcción de una marca mediante la gestión planificada de todos los procesos gráficos, comunicacionales y de posicionamiento que se llevan a cabo.  Es la gestión global de todos los elementos tangibles e intangibles que rodean a la marca con el fin de construir y transmitir una promesa que será clave.  Entre éstos se incluyen la imagen corporativa, los colores empresariales, la identidad corporativa y las normas de estilo empleadas en la comunicación general de la empresa. Todas estas acciones influyen y determinan el valor de marca, logrando su carácter distintivo, relevante y sostenible en el tiempo.
+                        </p>
+                        <p>
+                            Si crees que tu empresa necesita mejorar su imagen de marca o necesitas a alguien que se encargue del branding, ¡yo puedo ayudarte!
+                        </p>
+                    </div>
+                    <div class="mi-servicio__foto">
+                        <img class="mi-servicio__foto-img" src="img/img-disenyo-digital/branding.jpg" alt="Cartulinas de colores por el suelo">
+                    </div>
+                </article>
+                <article class="mi-servicio mi-servicio-invertido">
+                    <div class="mi-servicio__foto">
+                        <img class="mi-servicio__foto-img" src="img/img-disenyo-digital/diseno-grafico.jpg" alt="Álbum y cámara de fotos">
+                    </div>
+                    <div class="mi-servicio__texto">
+                        <h3>Diseño gráfico para tus redes y tu marca personal</h3>
+                        <p>
+                            El diseño gráfico cobra una especial importancia en las redes sociales, un sector que hace unos años parecía abarcar mucho menos de lo que lo hace hoy en día. Ha adquirido una gran relevancia en las publicaciones realizadas por las empresas, ya que estas son el escaparate de la tienda, y no tanto la propia web.
+                        </p>
+                        <p>
+                            Por norma general, el contenido visual es el punto más importante que has de tener en cuenta. Según algunos estudios, hasta un 90% de la información que recordamos proviene de los impactos visuales, y de estos, sólo un 20% proviene de textos. De ahí el gran mérito que tienen algunos influencers, por conseguir cautivar con tan solo palabras. Si crees que tu empresa necesita mejorar su imagen en redes, ¡contacta conmigo!
+                        </p>
+                    </div>
+                </article>
+                <article class="mi-servicio">
+                    <div class="mi-servicio__texto">
+                        <h3>¿Necesitas una página web?</h3>
+                        <p>
+                            Contar con un buen diseño web se ha convertido en un requisito imprescindible para la mayoría de negocios. El motivo es que una página web es la carta de presentación de una marca, y en función de esta, los usuarios podrán hacerse una idea de quién es la empresa, lo que hace y su grado de profesionalidad. Por eso, ya son muchas las marcas que apuestan por optimizar su web y ofrecer la mejor estética junto con los mejores contenidos para visibilizarse ante su público objetivo.
+                        </p>
+                        <p>
+                            El diseño web se puede definir como la cara visible de la página. La estructura, la imagen y la forma serían los elementos clave que tiene en cuenta este factor. Si crees que tu empresa necesita una nueva página web, yo puedo ayudarte tanto a crear una página web con Wordpress o con HTML5 y CSS3.
+                        </p>
+                    </div>
+                    <div class="mi-servicio__foto">
+                        <img class="mi-servicio__foto-img" src="img/img-disenyo-digital/diseno-web.jpg" alt="Tablet con un boceto de una web">
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="promocion-otro-servicio">
+            <div class="container otro-servicio">
+                <div class="otro-servicio-imagenes">
+                    <div class="otro-servicio-imagenes__foto">
+                        <img class="otro-servicio-imagenes__foto-img" src="img/img-disenyo-digital/marketing-digital-1.jpg" alt="Imágenes para diseño de marca">
+                    </div>
+                    <div class="otro-servicio-imagenes__foto">
+                        <img class="otro-servicio-imagenes__foto-img" src="img/img-disenyo-digital/marketing-digital-2.jpg" alt="Tablet con diferentes diseños">
+                    </div>
+                </div>
+                <div class="otro-servicio-texto">
+                    <h3>Una buena estrategia de contenidos mejora tu presencia digital</h3>
+                    <p> <!-- no va -->
+                        Para poder desarrollar una buena estrategia digital al completo, tener unas redes sociales actualizadas y optimizadas es crucial, al igual que crear contenido de calidad para tu audiencia. Si necesitas mejorar tu estrategia en redes y obtener contenido de calidad en diferentes formatos para mejorar tu presencia online, no te olvides de echarle un ojo a mis servicios de marketing digital.
+                    </p>
+                    <p class="texto-centrado">
+                        <a href="marketing-digital.html" class="boton-rosa">Descubre mis habilidades de marketing</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="testimonios info-verde">
+            <div class="container">
+                <div class="contenido-testimonio">
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="contenido-slide">
+                                    <div class="contenido-slide__titulo">
+                                        <div class="contenido-slide__avatar">
+                                            <img class="contenido-slide__avatar-img" src="img/img-seccion-testimonios/avatar-1.jpg" alt="Mujer Sonriendo">
+                                        </div>
+                                        <div class="contenido-slide__descripcion">
+                                            <h3 class="titulo-pequenyo contenido-slide__descripcion-nombre ">Esther López</h3>
+                                            <p class="texto-grande contenido-slide__descripcion-profesion">Dueña de El armario de Esther</p>
+                                        </div>
+                                    </div>
+                                    <p class="contenido-slide__texto"> Trabajar con María ha sido maravilloso. Desde el principio supo escucharme y entender mis preocupaciones. Analizó la situación de mi negocio, y decidimos que necesitaba una nueva estrategia de comunicación y un rebranding de mi marca. ¡Ahora mi negocio es todo un éxito!</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="contenido-slide">
+                                    <div class="contenido-slide__titulo">
+                                        <div class="contenido-slide__avatar">
+                                            <img class="contenido-slide__avatar-img" src="img/img-seccion-testimonios/avatar-2.jpg" alt="Chico joven serio">
+                                        </div>
+                                        <div class="contenido-slide__descripcion">
+                                            <h3 class="titulo-pequenyo contenido-slide__descripcion-nombre ">Jorge García</h3>
+                                            <p class="texto-grande contenido-slide__descripcion-profesion">CEO de Muebles García</p>
+                                        </div>
+                                    </div>
+                                    <p class="contenido-slide__texto"> Me ha encantado trabajar con María. Gracias a ella mejoró mucho la imagen y la estrategia comunicativa de mi marca. En mi caso, detectamos que la clave era optimizar el perfil de empresa en Google, mejorar el diseño de la página web y crear una tienda online. ¡Llegamos a muchos clientes nuevos! </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="contenido-slide">
+                                    <div class="contenido-slide__titulo">
+                                        <div class="contenido-slide__avatar">
+                                            <img class="contenido-slide__avatar-img" src="img/img-seccion-testimonios/avatar-3.jpg" alt="Mujer Sonriendo">
+                                        </div>
+                                        <div class="contenido-slide__descripcion">
+                                            <h3 class="titulo-pequenyo contenido-slide__descripcion-nombre ">Andrea Montesinos</h3>
+                                            <p class="texto-grande contenido-slide__descripcion-profesion">Dueña de Clínica Podológica Montesinos</p>
+                                        </div>
+                                    </div>
+                                    <p class="contenido-slide__texto"> Llevo años trabajando con María y gracias a ella mi clínica es un éxito. La estrategia de contenidos que hemos desarrollado en redes ha sido la clave para impulsar mi negocio. Logró informar y entretener a la audiencia, que poco a poco se fue convirtiendo en clientes reales.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sobre-mi info-blanco">
+            <div class="container">
+                <div class="contenido-sobre-mi">
+                    <h2 class="titulo-mediano contenido-sobre-mi__titulo">Sobre mí</h2>
+                    <div class="contenido-sobre-mi__texto">
+                        <p> ¡Hola! Soy María Blázquez, especialista en marketing y diseño digital. Soy apasionada de la comunicación, las redes sociales y el diseño. Me encanta transmitir sensaciones positivas, interactuar con las personas y crear contenido para mi audiencia.</p>
+                        <p> Empecé en el mundo del marketing estudiando la carrera de International Business. Ahí me di cuenta que la comunicación y el marketing eran lo mío por lo que decidí especializarme en esa rama. Más tarde, durante mis prácticas en empresa, me di cuenta de lo importante que es el diseño gráfico y de interfaces para una buena estrategia digital, por lo que decidí cursar un máster en diseño de productos digitales.</p>
+                    </div>
+                    <div class="contenido-sobre-mi__foto">
+                        <img class="contenido-sobre-mi__foto-img" src="img/img-seccion-sobre-mi/foto-sobre-mi.png" alt="Foto de María Blázquez">
+                    </div>
+                    <div class="contenido-sobre-mi__boton">
+                        <a href="sobre-mi.html" class="boton-rosa">Descubre quién soy</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contacto info-rosa">
+            <div class="container">
+                <div class="contacto__intro texto-centrado">
+                    <h2 class="titulo-mediano">¿Quieres contactar conmigo?</h2>
+                    <p class="texto-grande">Escríbeme un email a: mariablazz@outlook.com o rellena el formulario</p>
+                </div>
+                <div class="formulario">
+                    <form class="formulario-rellenar"
+                          action="https://formspree.io/f/mrgjdobz"
+                          method="POST"
+                    >
+
+                        <p class="formulario-rellenar__nombre">
+                            <label>
+                                <span class="etiqueta-formulario">Nombre y apellido</span>
+                                <input type="text" name="nombre">
+                            </label>
+                        </p>
+                        <p class="formulario-rellenar__email">
+                            <label>
+                                <span class="etiqueta-formulario">Email</span>
+                                <input type="email" name="email">
+                            </label>
+                        </p>
+                        <p class="formulario-rellenar__mensaje">
+                            <label>
+                                <span class="etiqueta-formulario">Mensaje</span>
+                                <textarea type="mensaje" cols="30" rows="10"></textarea>
+                            </label>
+                        </p>
+                        <p class="formulario-rellenar__enviar">
+                            <input type="submit" value="Enviar" class="boton-rosa">
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="mi-footer">
+        <div class="container-footer">
+            <div class="contenido">
+                <p class="mi-footer__texto">
+                    © 2022<br> María Blázquez. Marketing, comunicación y diseño digital.
+                </p>
+                <nav class="mi-footer__nav">
+                    <ul class="mi-footer__nav-lista">
+                        <li class="mi-footer__nav-lista-elemento">
+                            <a href="mis-proyectos.html" class="mi-footer__nav-lista-elemento-link">Mis proyectos</a>
+                        </li>
+                        <li class="mi-footer__nav-lista-elemento">
+                            <a href="marketing-digital.html" class="mi-footer__nav-lista-elemento-link">Marketing digital</a>
+                        </li>
+                        <li class="mi-footer__nav-lista-elemento">
+                            <a href="disenyo-digital.html" class="mi-footer__nav-lista-elemento-link">Diseño digital</a>
+                        </li>
+                        <li class="mi-footer__nav-lista-elemento">
+                            <a href="sobre-mi.html" class="mi-footer__nav-lista-elemento-link">Sobre mí</a>
+                        </li>
+                    </ul>
+                    <ul class="mi-footer__nav-lista">
+                        <li class="mi-footer__nav-lista-elemento">
+                            <a href="blog.html" class="mi-footer__nav-lista-elemento-link">Blog</a>
+                        </li>
+                        <li class="mi-footer__nav-lista-elemento">
+                            <a href="contacto.html" class="mi-footer__nav-lista-elemento-link">Contacto</a>
+                        </li>
+                        <li class="mi-footer__nav-lista-elemento">
+                            <a href="politica-cookies.html" class="mi-footer__nav-lista-elemento-link">Política de Cookies</a>
+                        </li>
+                        <li class="mi-footer__nav-lista-elemento">
+                            <a href="aviso-legal.html" class="mi-footer__nav-lista-elemento-link">Aviso legal y política de privacidad</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="redes">
+                    <p class="redes__titulo">
+                        ¡Sígueme en redes sociales!
+                    </p>
+                    <ul class="redes__ul">
+                        <li class="redes__ul-red-social icono">
+                            <a href="https://www.tiktok.com/@mariablazz" class="redes__ul-red-social-link">
+                                <img src="img/iconos/tiktok-logo.svg" alt="TikTok" class="redes__ul-red-social-link-img">
+                            </a>
+                        </li>
+                        <li class="redes__ul-red-social icono">
+                            <a href="https://twitter.com/mariablazz" class="redes__ul-red-social-link">
+                                <img src="img/iconos/twitter-logo.svg" alt="Twitter" class="redes__ul-red-social-link-img">
+                            </a>
+                        </li>
+                        <li class="redes__ul-red-social icono">
+                            <a href="https://www.instagram.com/mariablazz/" class="redes__ul-red-social-link">
+                                <img src="img/iconos/instagram-logo.svg" alt="Instagram" class="redes__ul-red-social-link-img">
+                            </a>
+                        </li>
+                        <li class="redes__ul-red-social icono">
+                            <a href="https://www.youtube.com/c/MaríaBlázquez" class="redes__ul-red-social-link">
+                                <img src="img/iconos/youtube-logo.svg" alt="YouTube" class="redes__ul-red-social-link-img">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+</body>
+</html>

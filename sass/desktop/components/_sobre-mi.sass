@@ -1,0 +1,21 @@
+.sobre-mi
+  .contenido-sobre-mi
+    display: grid
+    grid-template-columns: 2fr 1fr
+    grid-template-rows: 1fr 1fr 1fr
+    justify-content: center
+    align-items: center
+    &__titulo
+      grid-column: 1 / 2
+      grid-row: 1 / 2
+    &__texto
+      padding-right: 2rem
+      grid-column: 1 / 2
+      grid-row: 2 / 3
+    &__foto
+      grid-column: 2 / 3
+      grid-row: 1 / 4
+      &-img
+    &__boton
+      grid-column: 1 / 2
+      grid-row: 3 / 4
